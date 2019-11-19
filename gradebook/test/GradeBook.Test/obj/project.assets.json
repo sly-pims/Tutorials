@@ -6529,23 +6529,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sylvain.maillet\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Sylvain\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#Tutorial\\gradebook\\test\\GradeBook.Test\\GradeBook.Test.csproj",
+      "projectUniqueName": "E:\\Tutorials\\gradebook\\test\\GradeBook.Test\\GradeBook.Test.csproj",
       "projectName": "GradeBook.Test",
-      "projectPath": "E:\\C#Tutorial\\gradebook\\test\\GradeBook.Test\\GradeBook.Test.csproj",
-      "packagesPath": "C:\\Users\\Sylvain.maillet\\.nuget\\packages\\",
-      "outputPath": "E:\\C#Tutorial\\gradebook\\test\\GradeBook.Test\\obj\\",
+      "projectPath": "E:\\Tutorials\\gradebook\\test\\GradeBook.Test\\GradeBook.Test.csproj",
+      "packagesPath": "C:\\Users\\Sylvain\\.nuget\\packages\\",
+      "outputPath": "E:\\Tutorials\\gradebook\\test\\GradeBook.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sylvain.maillet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sylvain\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6558,8 +6554,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "E:\\C#Tutorial\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
-              "projectPath": "E:\\C#Tutorial\\gradebook\\src\\GradeBook\\GradeBook.csproj"
+            "E:\\Tutorials\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
+              "projectPath": "E:\\Tutorials\\gradebook\\src\\GradeBook\\GradeBook.csproj"
             }
           }
         }

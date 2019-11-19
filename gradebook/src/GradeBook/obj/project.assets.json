@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Sylvain.maillet\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Sylvain\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#Tutorial\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "projectUniqueName": "E:\\Tutorials\\gradebook\\src\\GradeBook\\GradeBook.csproj",
       "projectName": "GradeBook",
-      "projectPath": "E:\\C#Tutorial\\gradebook\\src\\GradeBook\\GradeBook.csproj",
-      "packagesPath": "C:\\Users\\Sylvain.maillet\\.nuget\\packages\\",
-      "outputPath": "E:\\C#Tutorial\\gradebook\\src\\GradeBook\\obj\\",
+      "projectPath": "E:\\Tutorials\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "packagesPath": "C:\\Users\\Sylvain\\.nuget\\packages\\",
+      "outputPath": "E:\\Tutorials\\gradebook\\src\\GradeBook\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sylvain.maillet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sylvain\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
