@@ -3,9 +3,44 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    public class Book
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+
+    public class NamedObject
     {
-        public Book(string name)
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+
+    public interface IBook
+    {
+        void AddGrade(double grade);
+        Statistics GetStats();
+        string Name { get; }
+        event GradeAddedDelegate GradeAdded;
+    }
+
+    public abstract class Book : NamedObject, IBook
+    {
+        public Book(string name) : base(name)
+        { }
+        public virtual event GradeAddedDelegate GradeAdded;
+        public abstract void AddGrade(double grade);
+        public virtual Statistics GetStats()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class InMemoryBook : Book, IBook
+    {
+        public InMemoryBook(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
@@ -14,7 +49,7 @@ namespace GradeBook
         public void AddLetterGrade(char letter)
         {
             //classic switch
-            switch(letter)
+            switch (letter)
             {
                 case 'A':
                     AddGrade(90);
@@ -39,53 +74,37 @@ namespace GradeBook
                     break;
             }
         }
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
-            if(grade <= 100 && grade >= 0)
+            if (grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+                if (GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
-            
+
         }
-        public Statistics GetStats()
+
+        public override event GradeAddedDelegate GradeAdded;
+        public override Statistics GetStats()
         {
             var result = new Statistics();
             result.Average = 0.0;
             result.High = double.MinValue;
             result.Low = double.MaxValue;
-             
-             //multiple option of loops
-             //Lopp type 1: do while
-            /*var index = 0;
-            do
-            {
-                result.High = Math.Max(grades[index], result.High);
-                result.Low = Math.Min(grades[index], result.Low);
-                result.Average += grades[index];
-                index ++;
-            }while(index < grades.Count);*/
 
-            //loop type 2: while
-            /*var index = 0;
-            while(index < grades.Count)
+            for (var index = 0; index < grades.Count; index++)
             {
-                result.High = Math.Max(grades[index], result.High);
-                result.Low = Math.Min(grades[index], result.Low);
-                result.Average += grades[index];
-                index ++;
-            }*/
-
-            //loop type 3: for
-            for(var index = 0; index < grades.Count; index ++)
-            {                
                 result.High = Math.Max(grades[index], result.High);
                 result.Low = Math.Min(grades[index], result.Low);
                 result.Average += grades[index];
             }
             result.Average /= grades.Count;
-            
+
             //switch pattern matching
-            switch(result.Average)
+            switch (result.Average)
             {
                 case var d when d >= 90.0:
                     result.Letter = 'A';
@@ -110,12 +129,6 @@ namespace GradeBook
             return result;
         }
         public List<double> grades;
-
-        public string Name
-        {
-            get;
-            set;
-        }
 
         public const string CATEGORY = "Science";
     }

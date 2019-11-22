@@ -6,14 +6,24 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            var book = new Book("Sylvain's Grade Book");
+            var book = new InMemoryBook("Sylvain's Grade Book");
+            book.GradeAdded += OnGradeAdded;
+            EnterGrades(book);
+            var stats = book.GetStats();
 
-            while(true)
+            Console.WriteLine($"The highest grade is {stats.High}, the average grade is {stats.Average:N1} and the lowest grade is {stats.Low}. \n The letter grade is {stats.Letter}");
+            Console.WriteLine($"The book name is: {book.Name}");
+            Console.WriteLine(InMemoryBook.CATEGORY);
+        }
+
+        private static void EnterGrades(IBook book)
+        {
+            while (true)
             {
                 Console.WriteLine("Please enter a grade or 'q' to quit ");
                 var input = Console.ReadLine();
 
-                if(input.ToLower() == "q")
+                if (input.ToLower() == "q")
                 {
                     break;
                 }
@@ -23,11 +33,11 @@ namespace GradeBook
                     var grade = double.Parse(input);
                     book.AddGrade(grade);
                 }
-                catch(ArgumentException ex)
+                catch (ArgumentException ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-                catch(FormatException ex)
+                catch (FormatException ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
@@ -36,11 +46,11 @@ namespace GradeBook
                     Console.WriteLine("**");
                 }
             }
-            var stats = book.GetStats();
-            
-            Console.WriteLine($"The highest grade is {stats.High}, the average grade is {stats.Average:N1} and the lowest grade is {stats.Low}. \n The letter grade is {stats.Letter}");
-            Console.WriteLine($"The book name is: {book.Name}");
-            Console.WriteLine(Book.CATEGORY);
+        }
+
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("A grade was added.");
         }
     }
 }
