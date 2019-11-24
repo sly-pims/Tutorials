@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 
 namespace GradeBook
@@ -31,12 +32,9 @@ namespace GradeBook
     {
         public Book(string name) : base(name)
         { }
-        public virtual event GradeAddedDelegate GradeAdded;
+        public abstract event GradeAddedDelegate GradeAdded;
         public abstract void AddGrade(double grade);
-        public virtual Statistics GetStats()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract Statistics GetStats();
     }
     public class InMemoryBook : Book, IBook
     {
@@ -91,39 +89,81 @@ namespace GradeBook
         public override Statistics GetStats()
         {
             var result = new Statistics();
-            result.Average = 0.0;
-            result.High = double.MinValue;
-            result.Low = double.MaxValue;
 
             for (var index = 0; index < grades.Count; index++)
             {
-                result.High = Math.Max(grades[index], result.High);
-                result.Low = Math.Min(grades[index], result.Low);
-                result.Average += grades[index];
+                result.Add(grades[index]);
             }
-            result.Average /= grades.Count;
 
-            //switch pattern matching
-            switch (result.Average)
+            return result;
+        }
+        public List<double> grades;
+
+        public const string CATEGORY = "Science";
+    }
+
+    public class DiskBook : Book, IBook
+    {
+        public DiskBook(string name) : base(name)
+        {
+            grades = new List<double>();
+            Name = name;
+        }
+
+        public void AddLetterGrade(char letter)
+        {
+            //classic switch
+            switch (letter)
             {
-                case var d when d >= 90.0:
-                    result.Letter = 'A';
+                case 'A':
+                    AddGrade(90);
                     break;
-                case var d when d >= 80.0:
-                    result.Letter = 'B';
+                case 'B':
+                    AddGrade(80);
                     break;
-                case var d when d >= 70.0:
-                    result.Letter = 'C';
+                case 'C':
+                    AddGrade(70);
                     break;
-                case var d when d >= 60.0:
-                    result.Letter = 'D';
+                case 'D':
+                    AddGrade(60);
                     break;
-                case var d when d >= 50.0:
-                    result.Letter = 'E';
+                case 'E':
+                    AddGrade(50);
+                    break;
+                case 'F':
+                    AddGrade(40);
                     break;
                 default:
-                    result.Letter = 'F';
+                    AddGrade(0);
                     break;
+            }
+        }
+        public override void AddGrade(double grade)
+        {
+            using (var writer = File.AppendText($"{Name}.txt"))
+            {
+                writer.WriteLine(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+            }
+        }
+
+        public override event GradeAddedDelegate GradeAdded;
+        public override Statistics GetStats()
+        {
+            var result = new Statistics();
+
+            using(var reader = File.OpenText($"{Name}.txt"))
+            {
+                var line = reader.ReadLine();
+                while(line != null)
+                {
+                    var number = double.Parse(line);
+                    result.Add(number);
+                    line = reader.ReadLine();
+                }
             }
 
             return result;
