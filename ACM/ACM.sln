@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "Tests\ACM.BLT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BL", "ACM.BL\ACM.BL.csproj", "{B7A15CC1-C0A1-452F-A8D1-033628EC480B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common", "Acme.Common\Acme.Common.csproj", "{79DC6851-490C-4C73-9606-9FC34548D85B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CommonTest", "Test\Acme.CommonTest\Acme.CommonTest.csproj", "{021A9F38-9CBB-48C6-9DA7-260EC3B5DF5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,21 @@ Global
 		{B7A15CC1-C0A1-452F-A8D1-033628EC480B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A15CC1-C0A1-452F-A8D1-033628EC480B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A15CC1-C0A1-452F-A8D1-033628EC480B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DC6851-490C-4C73-9606-9FC34548D85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DC6851-490C-4C73-9606-9FC34548D85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DC6851-490C-4C73-9606-9FC34548D85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DC6851-490C-4C73-9606-9FC34548D85B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021A9F38-9CBB-48C6-9DA7-260EC3B5DF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021A9F38-9CBB-48C6-9DA7-260EC3B5DF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021A9F38-9CBB-48C6-9DA7-260EC3B5DF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021A9F38-9CBB-48C6-9DA7-260EC3B5DF5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BFFE587B-DB90-4E8C-811D-BA4AE7B8922F} = {5CB85641-6703-4F27-B040-70FD073B8CA0}
+		{021A9F38-9CBB-48C6-9DA7-260EC3B5DF5F} = {5CB85641-6703-4F27-B040-70FD073B8CA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A515C061-38CA-4F69-A5F4-0B3C279A862B}

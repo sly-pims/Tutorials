@@ -1,0 +1,5 @@
+E:\C#Tutorial\ACM\Acme.Common\bin\Debug\Acme.Common.dll
+E:\C#Tutorial\ACM\Acme.Common\bin\Debug\Acme.Common.pdb
+E:\C#Tutorial\ACM\Acme.Common\obj\Debug\Acme.Common.csprojAssemblyReference.cache
+E:\C#Tutorial\ACM\Acme.Common\obj\Debug\Acme.Common.dll
+E:\C#Tutorial\ACM\Acme.Common\obj\Debug\Acme.Common.pdb
