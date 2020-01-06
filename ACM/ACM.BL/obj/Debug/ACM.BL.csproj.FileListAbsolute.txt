@@ -1,12 +1,5 @@
 E:\C#Tutorial\ACM\ACM.BL\bin\Debug\ACM.BL.dll
 E:\C#Tutorial\ACM\ACM.BL\bin\Debug\ACM.BL.pdb
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.csprojAssemblyReference.cache
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL_MarkupCompile.cache
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL_MarkupCompile.lref
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\Themes\Generic.baml
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.g.resources
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.Properties.Resources.resources
-E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.csproj.GenerateResource.cache
 E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.dll
 E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
+E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.csprojAssemblyReference.cache
