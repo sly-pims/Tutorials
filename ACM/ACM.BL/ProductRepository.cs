@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ACM.BL
+﻿namespace ACM.BL
 {
     public class ProductRepository
     {
@@ -23,7 +17,23 @@ namespace ACM.BL
 
         public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChange)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    { }
+                    else
+                    { }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
