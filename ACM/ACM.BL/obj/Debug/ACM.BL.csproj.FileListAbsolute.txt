@@ -3,3 +3,6 @@ E:\C#Tutorial\ACM\ACM.BL\bin\Debug\ACM.BL.pdb
 E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.dll
 E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
 E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.csprojAssemblyReference.cache
+E:\C#Tutorial\ACM\ACM.BL\bin\Debug\Acme.Common.dll
+E:\C#Tutorial\ACM\ACM.BL\bin\Debug\Acme.Common.pdb
+E:\C#Tutorial\ACM\ACM.BL\obj\Debug\ACM.BL.csproj.CopyComplete

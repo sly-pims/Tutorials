@@ -13,3 +13,5 @@ E:\C#Tutorial\ACM\Test\Acme.CommonTest\obj\Debug\Acme.CommonTest.csprojAssemblyR
 E:\C#Tutorial\ACM\Test\Acme.CommonTest\obj\Debug\Acme.CommonTest.csproj.CopyComplete
 E:\C#Tutorial\ACM\Test\Acme.CommonTest\obj\Debug\Acme.CommonTest.dll
 E:\C#Tutorial\ACM\Test\Acme.CommonTest\obj\Debug\Acme.CommonTest.pdb
+E:\C#Tutorial\ACM\Test\Acme.CommonTest\bin\Debug\ACM.BL.dll
+E:\C#Tutorial\ACM\Test\Acme.CommonTest\bin\Debug\ACM.BL.pdb
